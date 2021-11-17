@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>perhotelan2</title>
+  <style type="text/css">
+    body{
+      overflow-y: hidden;
+      margin:0;
+      padding: 0;
+      font-family: verdana;
+      background-color: #ffffff;
+    }
+    form{
+      font-family: arial;
+      background-color: rgb(255,255,255,0.7);
+      width: 300px;
+      margin: 180px auto;
+      padding: 30px;
+      text-align: right;
+      color: #2D2D2D;
+      border-radius: 40px 10px;
+      box-shadow: 2px 2px 7px #393939;
+    }
+    input{
+      margin: 10px;
+    }
+    input.login{
+      background-color: #364f6b;
+      color: #ffffff;
+      font-family: verdana;
+      font-weight: bold;
+      border-radius: 10px;
+      padding: 5px 10px;
+      margin: 30px 10px auto 0px;
+      text-transform: uppercase;
+      transition: .2s;
+    }
+    input.login:hover{
+      background-color: #ecd866;
+      color: #CDCDCD;
+    }
+    
+    p{
+      text-align:center;
+      margin: 50px auto;
+      margin-top: 10px;
+      padding: 10px;
+      font-weight: bold;
+      color: #080000;
+      font-family: verdana;
+      background-color: #e6d059;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body background=".">
+    <form action="halaman utama.html" method="get" id="myForm" onsubmit=" return validasi()">
+      <p>Reservasi perhotelan</p>
+      nama  <input type="text" name="nama" placeholder="masukan nama"></input><br>
+      lama  <input type="text" name="lama" placeholder="masukan lama menginap"></input><br>
+      <br>
+    <label>tipe <select name="tipe"style="height: 20px; width: 200px;" ></label><br>
+        <option value="Deluxe Room" id="Deluxe">Deluxe Room</option>
+        <option value="Suite Room" id="Suite">Suite Room</option>
+        <option value="Precident Room" id="Precident">Precident Room</option>
+        </select>
+        <br><br>
+        <label>Status <select name="status" style="height: 20px; width: 200px;"></label>   
+            <option value="Member" id="Member">Member</option>    
+            <option value="No Member" id="No Member">No Member</option> 
+        </select>
+         <br><br>
+      <input class="Cek Data" type="submit" name="submit" value="cek data" onsubmit=" return validasi()" >
+    </form>
+  </body>
+  <script type="text/javascript">
+  function validasi(){
+    var nama= document.forms("myForm")("nama").value;
+    var lama= document.forms("myForm")("lama").value;
+    var tipe= document.forms("myForm")("tipe").value;
+    var deluxe= document.forms("myForm")("275000").value;
+    var suite= document.forms("myForm")("300000").value;
+    var precident= document.forms("myForm")("375000").value;
+    var status= document.forms("myForm")("status").value;
+    var member= document.forms("myForm")("member").value;
+    var noMember= document.forms("myForm")("no member").value;
+
+    var total ="";
+
+    if (tipe) {
+                tarif = lama * 275000;
+                kamar = "Deluxe Room";
+            } else if (jenis == 2) {
+                tarif = lama * 300000;
+                kamar = "Suite Room";
+            } else if (jenis == 3) {
+                tarif = lama * 375000;
+                kamar = "President Room";
+            }
+
+            if (status) {
+                if (lama >= 4 && lama <= 7) {
+                    diskon = 0.20 * tarif;
+                } else if (lama > 7) {
+                    diskon = 0.35 * tarif;
+                }
+            } else if (status) {
+                if (lama >= 4 && lama <= 7) {
+                    diskon = 0.10 * tarif;
+                } else if (lama > 7) {
+                    diskon = 0.15 * tarif;
+                }
+            }
+
+            bayar = tarif - diskon;
+document.write("Nama : " + nama + "<br>")
+document.write("<P>lama : " + lama + "<br></p>")
+document.write(`<p> total :${reservasi} </p>`  );
+  
+        }
+</script>
+</html>
+var nama=prompt("masukan nama")
+    var lama=prompt("masukan lama menginap")
+    var kamar=prompt("masukan kamar")
+    var status=prompt("punya member?")
+    var jumlah;
+    var diskon;
+document.write("Nama : " + nama + "<br>")
+    document.write("lama : "+ lama  + "<br>")
+    document.write("kamar : " + kamar + "<br>")
+if (tipe =="deluxe room"){
+  jumlah ("")
+document.write("deluxe room" + deluxe * 275000 )
+
+}

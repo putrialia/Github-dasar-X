@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+    document.write("_ _**_ _ PEMESANAN HOTEL BANDUNG _ _**_ _<br><br>");
+    nama = prompt("nama pelanggan :");
+    document.write("nama pelanggan :"+ nama+"<br>");
+    document.write("jenis kamar :<br> ");
+    document.write("1.Deluxe Room Rp.275.000/hari <br>");
+    document.write("2.Suite Room Rp.300.000/hari<br>");
+    document.write("3.President Room Rp.370.000/hari<br>");
+    deluxe = 275000;
+    suite = 300000;
+    precident = 370000;
+    var pilih;
+    var jumlah;
+    kamar = prompt("jenis kamar:");
+    document.write("jenis kamar :"+ kamar+"<br>"+"<br>");
+    LamaMenginap = prompt("lama menginap :");
+    document.write("lama menginap :"+ LamaMenginap+"<br>"+"<br>");
+    status = prompt("status pelanggan :");
+    document.write("1.member<br>");
+    document.write("2.non member<br>");
+    document.write("status pelanggan :"+ status+" <br>"+"<br>");
+
+    document.write("_ _**_ _ NOTA PEMESANAN HOTEL BANDUNG _ _**_ _"+"<br>"+"<br>");
+    document.write("nama pelanggan:" + nama+"<br>");
+    document.write("jenis kamar:" + kamar+"<br>");
+    document.write("lama menginap:"+ LamaMenginap+"<br>");
+    document.write("status pelanggan :"+ status+" <br>");
+
+    if(pilih=deluxe){
+        deluxe=275000;
+        jumlah=LamaMenginap*deluxe;
+        document.write("Total:"+jumlah);
+    }
+    else if(pilih=suite){
+        suite=300000;
+        jumlah=LamaMenginap*suite;
+        document.write("Total:"+jumlah);
+    }
+    else if(pilih=precident){
+        precident=375000;
+        jumlah=LamaMenginap*precident;
+        document.write("Total:"+jumlah);
+    }
+"<br>"
+    document.write("<br>"+"===================================================="+"<br>"+"<br>");
+    </script>
+    </body>
+</html>

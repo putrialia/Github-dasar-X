@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>grade</title>
+  <style type="text/css">
+    body{
+      overflow-y: hidden;
+      margin:0;
+      padding: 0;
+      font-family: verdana;
+      background-color: #ffffff;
+    }
+    form{
+      font-family: arial;
+      background-color: rgb(255,255,255,0.7);
+      width: 300px;
+      margin: 180px auto;
+      padding: 30px;
+      text-align: right;
+      color: #2D2D2D;
+      border-radius: 40px 10px;
+      box-shadow: 2px 2px 7px #393939;
+    }
+    input{
+      margin: 10px;
+    }
+    input.login{
+      background-color: #364f6b;
+      color: #ffffff;
+      font-family: verdana;
+      font-weight: bold;
+      border-radius: 10px;
+      padding: 5px 10px;
+      margin: 30px 10px auto 0px;
+      text-transform: uppercase;
+      transition: .2s;
+    }
+    input.login:hover{
+      background-color: #63edf1;
+      color: #CDCDCD;
+    }
+    
+    p{
+      text-align:center;
+      margin: 50px auto;
+      margin-top: 10px;
+      padding: 10px;
+      font-weight: bold;
+      color: #080000;
+      font-family: verdana;
+      background-color: #70e7fc;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+
+  <form action="halaman utama.html" method="get" id="myForm" onsubmit=" return validasi()">
+      <p>Data Siswa</p>
+      nama  <input type="text" name="nama" placeholder="nama"><br>
+      kelas  <input type="text" name="kelas" placeholder="kelas"><br>
+      nilai  <input type="text" name="nilai" placeholder="nilai">
+    
+    
+      <input class="Cek Data" type="submit" name="submit" value="Cek Data">
+    </form>
+  </body>
+  <script type="text/javascript">
+  function validasi(){
+    var nama= document.forms["myForm"]["nama"].value;
+    var kelas= document.forms["myForm"]["kelas"].value;
+    var nilai= document.forms["myForm"]["nilai"].value;
+
+    var grade ="";
+
+if(nilai >= 81){
+    grade = "A";
+}
+else if(nilai >= 61){
+    grade = "B";
+}
+else if(nilai >= 41){
+    grade = "C";
+}
+else if(nilai >= 16){
+    grade = "D";
+}
+else if(nilai >= 0){
+    grade = "E";
+}
+else{
+    grade = "F"
+}
+document.write("Nama : " + nama + "<br>")
+document.write("<P>Kelas : " + kelas + "<br></p>")
+document.write(`<p>Nilai  anda : ${grade} </p>`  );
+  
+        }
+</script>
+</html>

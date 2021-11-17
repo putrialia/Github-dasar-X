@@ -1,0 +1,12 @@
+body{
+    font-size: 14px;
+    color: blue;
+}
+p{
+    font-family: calibri, Helvetica, sans-serif;
+}
+h1,h2{
+   text-decoration:underlined;
+   font-size:23 px;
+   color:green
+}

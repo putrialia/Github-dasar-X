@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<title> Pengonversi Suhu Fahrenheit ke Celsius </title>
+<body>
+<h2> Pengubah Suhu </h2>
+<p> Ketik nilai dalam fields Fahrenheit untuk mengonversi nilai menjadi Celsius: </p>
+
+<p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p>
+
+<script>
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+}
+</script>
+
+</body>
+</html>

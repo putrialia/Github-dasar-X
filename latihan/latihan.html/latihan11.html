@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perhotelan</title>
+</head>
+<body>
+    <br><br>
+    <center>
+        <form action="halaman utama.html" method="get" id="myForm" onsubmit=" return validasi()"></form>
+        <p>Reservasi Perhotelan</p>
+  <label>Nama<input type="text" name="nama" placeholder="masukan nama"><br><br></label>
+  <label>lama<input type="text" name="lama menginap" placeholder="masukan lama menginap"><br><br></label>
+  <label>tipe<select name="tipe" style="height: 30px; width: 170px;"></label>   
+    <option value="Deluxe Room" id="Deluxe">Deluxe Room</option>
+    <option value="Suite Room" id="Suite">Suite Room</option>
+    <option value="Precident Room" id="Precident">Precident Room</option>
+    </select>
+    <br><br>
+    <label>Status <select name="Tipe" style="height: 30px; width: 158px;"></label>   
+        <option value="Member" id="Member">Member</option>    
+        <option value="No Member" id="No Member">No Member</option> 
+    </select>
+     <br><br>
+    <input class="Cek Data" type="submit" name="submit" value="Cek Data">
+</form>
+    </center>
+</body>
+<script type="text/javascript">
+ function validasi(){
+    var nama = document.getElementById("nama").value;
+    var lama = document.getElementById("lama").value;
+     var a = document.getElementById("Deluxe").value;
+     var b = document.getElementById("Suite").value;
+     var c = document.getElementById("President").value;
+     var d = document.write("275000").value;
+     var e = document.write("300000").value;
+     var f = document.write("375000").value;
+     var hari = document.write("hari").value;
+     var diskon;
+     var nama = document.write("nama");
+ }
+ if (jenis == 1) {
+                tarif = lama * 275000;
+                kamar = "Deluxe Room";
+            } else if (jenis == 2) {
+                tarif = lama * 300000;
+                kamar = "Suite Room";
+            } else if (jenis == 3) {
+                tarif = lama * 375000;
+                kamar = "President Room";
+            }
+
+            if (status == 1) {
+                if (lama >= 4 && lama <= 7) {
+                    diskon = 0.20 * tarif;
+                } else if (lama > 7) {
+                    diskon = 0.35 * tarif;
+                }
+            } else if (status == 2) {
+                if (lama >= 4 && lama <= 7) {
+                    diskon = 0.10 * tarif;
+                } else if (lama > 7) {
+                    diskon = 0.15 * tarif;
+                }
+            }
+
+            bayar = tarif - diskon;
+
+</script>
+</html>
